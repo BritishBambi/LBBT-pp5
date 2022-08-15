@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Simple container for 403 -->
+<div class="container">
+    <div class="row">
+        <div>
+            <h2>403 YOU ARE NOT AUTHORIZED TO VIEW THIS PAGE</h2>
+            <a href="{% url 'home' %}" class="btn">Return Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
