@@ -48,4 +48,5 @@ class Review(models.Model):
 class Recipe(models.Model):
     """Product recipe to be detailed on a product page"""
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    recipe_title = models.TextField(max_length=100, blank=True)
     recipe = models.TextField(max_length=3000, blank=True)
