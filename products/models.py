@@ -4,6 +4,9 @@ from django.contrib.auth.models import User
 
 class Category(models.Model):
     """Model to create the product catagory"""
+
+    class Meta:
+        verbose_name_plural = 'Catagories'
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -48,5 +51,5 @@ class Review(models.Model):
 class Recipe(models.Model):
     """Product recipe to be detailed on a product page"""
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    recipe_title = models.TextField(max_length=100, blank=True)
+    recipe_title = models.CharField(max_length=100, blank=True)
     recipe = models.TextField(max_length=3000, blank=True)
