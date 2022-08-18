@@ -37,7 +37,13 @@
                 {% else %}
                 <small class="text-muted">No Rating</small>
                 {% endif %}
-                <p>Category: <a href="">{{ product.category.friendly_name }}</a></p>
+                {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
                 <button class="btn-lg btn-default">View Recipe</button>
             </div>
