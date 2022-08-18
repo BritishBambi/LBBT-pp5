@@ -13,24 +13,25 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="desserts-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Desserts
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
+            <div class="dropdown-menu border-0" aria-labelledby="desserts-link">
                 <a href="{% url 'products' %}?category=puddings" class="dropdown-item">Puddings</a>
                 <a href="{% url 'products' %}?category=cakes" class="dropdown-item">Cakes</a>
                 <a href="{% url 'products' %}?category=cheesecakes" class="dropdown-item">Cheescakes</a>
                 <a href="{% url 'products' %}?category=tarts" class="dropdown-item">Tarts</a>
                 <a href="{% url 'products' %}?category=pies" class="dropdown-item">Pies</a>
-                <a href="{% url 'products' %}?category=puddings,cakes,cheesecakes,tarts,pies" class="dropdown-item">All Desserts</a>
+                <a href="{% url 'products' %}?category=vegan" class="dropdown-item">Vegan</a>
+                <a href="{% url 'products' %}?category=puddings,cakes,cheesecakes,tarts,pies,vegan" class="dropdown-item">All Desserts</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="snack-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Light Bites
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
+            <div class="dropdown-menu border-0" aria-labelledby="snack-link">
                 <a href="{% url 'products' %}?category=donuts" class="dropdown-item">Donuts</a>
                 <a href="{% url 'products' %}?category=biscuits" class="dropdown-item">Biscuits</a>
                 <a href="{% url 'products' %}?category=muffins" class="dropdown-item">Muffins</a>
