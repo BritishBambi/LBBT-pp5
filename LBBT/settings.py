@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import os
+import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
@@ -31,7 +32,7 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lbbt.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -113,12 +114,17 @@ WSGI_APPLICATION = 'LBBT.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+if os.environ.get("DEVELOPMENT"):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    }
 
 
 # Password validation
