@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
@@ -26,8 +27,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image_url = models.URLField(max_length=1024, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True, default='placeholder.jpg')
+    image = CloudinaryField('image', default='placeholder.jpg')
 
 
 RATE_CHOICES = [
