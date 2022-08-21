@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/site-background.png');
+    background: url('https://res.cloudinary.com/jojocloudci/image/upload/v1661093861/site-background_m4lw0d.png');
     background-repeat: repeat; 
     background-size: cover;
     height: calc(100vh - 164px);
