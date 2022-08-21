@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Recipe
 
 # Create your views here.
 
@@ -42,7 +42,7 @@ def all_products(request):
             if not query:
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-   
+
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
             products = products.filter(queries)
@@ -62,10 +62,13 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to render an individual product detail page"""
 
-    product = get_object_or_404(Product, pk=product_id)
+    # product = get_object_or_404(Product, pk=product_id)
+    product = Product.objects.get(id=product_id)
+    recipies = Recipe.objects.get(product=product)
 
     context = {
         'product': product,
+        'recipies': recipies,
     }
 
     return render(request, 'products/product_detail.html', context)
