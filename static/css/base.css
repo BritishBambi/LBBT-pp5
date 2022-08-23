@@ -85,7 +85,7 @@ h1, h2{
     right: 10px;
 }
 
-.btt-link{
+.btt-link, .text-info, .text-danger{
     cursor: pointer;
 }
 
