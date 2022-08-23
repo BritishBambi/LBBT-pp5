@@ -6,14 +6,15 @@ html {
 
 body {
     background: url('https://res.cloudinary.com/jojocloudci/image/upload/v1661093861/site-background_m4lw0d.png');
-    background-repeat: repeat; 
+    background-repeat: repeat;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2{
+h1,
+h2 {
     font-family: 'DynaPuff', cursive;
 }
 
@@ -67,7 +68,7 @@ h1, h2{
     background: #000 !important;
 }
 
-.overlay{
+.overlay {
     height: 100%;
     width: 100%;
     top: 0;
@@ -85,17 +86,21 @@ h1, h2{
     right: 10px;
 }
 
-.btt-link{
+.btt-link {
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
 
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -111,7 +116,14 @@ h1, h2{
     .header-container {
         padding-top: 164px;
     }
+
+    .pt-lg-2 {
+        display: -ms-flexbox !important;
+        display: flex !important;
+        justify-content: space-between;
+    }
 }
+
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {

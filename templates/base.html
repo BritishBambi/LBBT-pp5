@@ -35,6 +35,7 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/e7fc5002ce.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -51,7 +52,7 @@
                     <img src="https://res.cloudinary.com/jojocloudci/image/upload/v1661093256/logo_wide_2_lrbimt.png" alt="LBBT Logo">
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div id="search_container" class="col-12 col-lg-4 my-auto py-1 py-lg-0 hidden">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
