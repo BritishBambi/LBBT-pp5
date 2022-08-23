@@ -165,8 +165,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 if os.environ.get("DEVELOPMENT"):
-    STATIC_URL = '/static/'
-    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+    STATIC_URL = '/static_lbbt/'
+    STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static_lbbt'),)
 else:
     STATIC_URL = '/static/'
     STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
