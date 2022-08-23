@@ -1,5 +1,7 @@
 # Little Ben's Big Treats
 
+[Link to Deployed site](https://lbbt.herokuapp.com)
+
 ## UX 
 
 ### CRUD
@@ -29,6 +31,18 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
 
 #### Wireframes
 
+Home page: The home page will welcome the users to the site and give a clear description as to the purpose of the site. The graphics will be familiar to gamers to make sure they immedietly feel welcome.
+
+Product List Page:
+
+Product Detail Page
+
+Bag:
+
+Checkout:
+
+Account Page:
+
 ## Database Schema
 
 I knew going into the project that custom models were going to be required when building the site. The intention was always to use Allauth to handle all the user authentication.
@@ -40,6 +54,14 @@ Home Page:
 The Home Page welcomes the user into the site with a clear heading and description as to what the site does. From here the user can easily find some of the key features and offers of the site. 
 
 Nav Bar: The nav bar has a simple design that makes it easy for the user to find available links and the site logo. Clicking on the site logo will also bring the user to the home page from any other page on the site. The links are capitalized and easy to locate. The search bar is also ingrained into the nav bar which makes it easy for the user to make a product search from any location on the site. A direct link to the user account page and the users bag is also highlighted at the end. This allows all of the main site features to be easily accessed by the user.
+
+Product Listing Page:
+
+Product Page:
+
+Bag:
+
+Checkout:
 
 ## Future Features
 
@@ -129,3 +151,6 @@ By forking the GitHub Repository you can make a copy of the original repository 
 ## Acknowledgements
 
 ## Credits
+
+- Credit to [Julie Ucha](https://www.julieucha.com) for designing the logo and icon for the site.
+- All recipes and product listing have been taken from (BBC Food)[https://www.bbc.co.uk/food] and all assets belong to them.
