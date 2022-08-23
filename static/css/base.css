@@ -101,6 +101,11 @@ h2 {
     z-index: 999999;
 }
 
+#product-heading{
+    text-decoration: underline;
+    color: black;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
