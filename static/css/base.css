@@ -89,6 +89,13 @@ h1, h2{
     cursor: pointer;
 }
 
+.message-container{
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 999999;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
