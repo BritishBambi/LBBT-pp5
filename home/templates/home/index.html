@@ -11,14 +11,30 @@
 
 {% block content %}
 <div class="container h-100">
-    <div class="row h-100">
-        <div class="col-md-8 col-md-6 my-auto">
-            <h1 class="display-4 logo-font text-black">The Freshest Recipes, Straight to your door</h1>
-            <div class="my-5">
+    <div class="row">
+        <div class="col-lg-10 mt-3 offset-md-1 bg-white text-center border-black rounded p-5">
+            <h1 class="display-4 logo-font text-black">Little Ben's Big Treats!</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-10 mt-3 offset-md-1 bg-white text-center border-black rounded p-5">
+            <h2 class="display-4 logo-font text-black">The Freshest Recipes, Straight to your door</h2>
+            <div class="my-1">
                 <h4>
-                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
+                    <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop
+                        Now</a>
                 </h4>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 mt-3 offset-md-1 bg-white text-center border-black rounded p-5">
+            <a href=""><h2 class="display-4 logo-font text-black">Read the blog</h2></a>
+            <img class="img-fluid rounded border-black" src="https://res.cloudinary.com/jojocloudci/image/upload/v1661221643/treats_fkggcn.jpg" alt="">
+        </div>
+        <div class="col-lg-4 mt-3 offset-md-2 bg-white text-center border-black rounded p-5">
+            <a href=""><h2 class="display-4 logo-font text-black">About Us</h2></a>
+            <img class="img-fluid rounded border-black" src="https://res.cloudinary.com/jojocloudci/image/upload/v1661222224/rams_nsvhxh.jpg" alt="">
         </div>
     </div>
 </div>

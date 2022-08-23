@@ -47,8 +47,6 @@ Nav Bar: The nav bar has a simple design that makes it easy for the user to find
 
 ## Technologies
 
-## Technologies
-
 - HTML
     - HTML was used as the base language for the templates created for the site.
 
