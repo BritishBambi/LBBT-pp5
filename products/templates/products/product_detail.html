@@ -26,6 +26,8 @@
                 {% endif %}
                 <br><br>
                 <h3 class="text-center">{{ product.name }}</h3>
+                <h4 class="text-center">Rated <b>{{ reviews_avg.rate__avg|floatformat:"-1" }}</b> by
+                    <b>{{ reviews_count }}</b> {% if reviews_count == 1 %}person{% else %}people{% endif %}</h4>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
@@ -94,7 +96,8 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="btn-lg btn-default border-black text-black" id="review-btn" href="{% url 'review_product' product.id %}">Review Product</a>
+                        <a class="btn-lg btn-default border-black text-black" id="review-btn"
+                            href="{% url 'review_product' product.id %}">Review Product</a>
                         <div class="col-12">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                 <span class="icon">
@@ -111,19 +114,22 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8 mt-3 offset-md-2">
-            <h2>Reviews</h2>
-            <div class="card">
-                <div class="card-content">
-                    <ul>
-                        <li>
-
-                        </li>
-                    </ul>
-                </div>
+        <div class="col-lg-8 mt-3 offset-md-2 border-black">
+            <h2 class="text-center">Reviews</h2>
+            {% for review in reviews %}
+            <div class="review-container">
+                <p>@{{ review.user.username }}</p>
+                <p>{{ review.date }}</p>
+                <br>
+                <p class="review-text">{{ review.text|truncatewords:15 }}</p>
+                <br>
+                <p class="secondary-content">{{ review.rate }} / 5</p>
+                <a href="{% url 'view_review' product.id user.username %}" class="btn border-black">View Review</a>
             </div>
+            {% endfor %}
         </div>
     </div>
+</div>
 </div>
 
 {% endblock %}

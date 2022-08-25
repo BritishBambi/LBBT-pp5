@@ -137,6 +137,22 @@ h2 {
     color: #000 !important;
 }
 
+.review-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.review-text{
+    max-width: 40%;
+}
+
+#review-exists{
+    display: flex;
+    flex-direction: column;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

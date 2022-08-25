@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect, reverse, HttpResponseRedirect
+from django.shortcuts import render, redirect, reverse, HttpResponseRedirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.contrib.auth.models import User
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Recipe, Review
@@ -69,16 +70,23 @@ def product_detail(request, product_id):
     product = Product.objects.get(id=product_id)
     recipies = Recipe.objects.get(product=product)
 
+    reviews = Review.objects.filter(product=product)
+    reviews_avg = reviews.aggregate(Avg('rate'))
+    reviews_count = reviews.count()
+
     context = {
         'product': product,
         'recipies': recipies,
+        'reviews': reviews,
+        'reviews_avg': reviews_avg,
+        'reviews_count': reviews_count,
     }
 
     return render(request, 'products/product_detail.html', context)
 
 
 @login_required
-def reviewProduct(request, product_id):
+def review_product(request, product_id):
 
     product = Product.objects.get(id=product_id)
     user = request.user
@@ -110,6 +118,22 @@ def reviewProduct(request, product_id):
         'product': product,
         'form': form,
         'review_exists': review_exists,
+    }
+
+    return render(request, template, context)
+
+
+def view_review(request, product_id, username):
+
+    user = get_object_or_404(User, username=username)
+    product = Product.objects.get(id=product_id)
+    review = Review.objects.get(user=user, product=product)
+
+    template = 'products/review_detail.html'
+
+    context = {
+        'review': review,
+        'product': product,
     }
 
     return render(request, template, context)
