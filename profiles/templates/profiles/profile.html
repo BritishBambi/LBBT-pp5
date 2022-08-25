@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<!-- Profile Details Container -->
+<div class="container">
+    <br><br>
+    <div class="row">
+        <!-- Profile Picture  -->
+        <div class="col-md-5">
+            <br>
+            <img class="img-fluid" src='' alt="" style="width: 100%;">
+            <img class="img-fluid" src='' alt="default profile photo"
+                style="width: 100%;">
+            <br>
+        </div>
+        <!-- Profile Details -->
+        <div class="col-md-7 shadow-lg p-3 mb-5 border-black rounded bg-white">
+            <h3 class="card-title">{{ user.username }}</h3>
+            <ul style="font-size: 20px;">
+            </ul>
+            <p class="lead"></p>
+            {% if user.is_authenticated %}
+            <a href="" class="btn">Edit Profile</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
