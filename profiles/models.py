@@ -20,8 +20,21 @@ class UserProfile(models.Model):
     def __str__(self):
         return self.user.username
 
+
 @receiver(post_save, sender=User)
-def create_or_update_user_profile(sender, instance, created, **kwargs):
+def create_profile(sender, instance, created, **kwargs):
+    """
+    On creation of a new user account a profile will
+    also be made so that the user can easily have a profile
+    automatically made for them
+    """
     if created:
         UserProfile.objects.create(user=instance)
-    instance.userprofile.save()
+
+
+@receiver(post_save, sender=User)
+def save_profile(sender, instance, **kwargs):
+    """
+    Alows the user profile to be saved on changes
+    """
+    instance.profile.save()
