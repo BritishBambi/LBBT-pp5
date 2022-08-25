@@ -1,9 +1,11 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, HttpResponseRedirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Recipe
+
+from .models import Product, Category, Recipe, Review
+from .forms import RateForm
 
 # Create your views here.
 
@@ -79,9 +81,35 @@ def product_detail(request, product_id):
 def reviewProduct(request, product_id):
 
     product = Product.objects.get(id=product_id)
+    user = request.user
+
+    if Review.objects.filter(product=product, user=user).exists():
+        review_exists = True
+    else:
+        review_exists = False
+
+    if request.method == 'POST':
+        form = RateForm(request.POST)
+        if form.is_valid():
+            rate = form.save(commit=False)
+            rate.user = user
+            rate.product = product
+            rate.save()
+            messages.success(request, 'Review saved')
+
+            return HttpResponseRedirect(
+                reverse('product_detail', args=[product_id])
+                )
+
+    else:
+        form = RateForm()
+
+    template = 'products/product_review.html'
 
     context = {
         'product': product,
+        'form': form,
+        'review_exists': review_exists,
     }
 
-    return render(request, 'products/product_review.html', context)
+    return render(request, template, context)

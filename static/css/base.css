@@ -133,6 +133,10 @@ h2 {
     text-decoration: none;
 }
 
+.review-input-field{
+    color: #000 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -150,6 +154,10 @@ h2 {
         right: 0;
         left: 0;
         z-index: 1030;
+    }
+
+    #review-box{
+        margin-left: 25%;
     }
 
     .header-container {
