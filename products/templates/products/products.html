@@ -11,7 +11,7 @@
 
 {% block content %}
 <div class="container-fluid">
-    <div class="row bg-white">
+    <div class="row bg-white border-black">
         <div class="col text-center mt-3">
             <h1 class="logo-font text-black" ><a id="product-heading" href="{% url 'products' %}">Products</a></h1>
             {% for c in current_categories %}
@@ -26,7 +26,7 @@
     </div>
     <div class="row">
         <div class="product-container col-10 offset-1">
-            <div class="row mt-1 mb-2 bg-white">
+            <div class="row mt-1 mb-2 bg-white border-black">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end bg-white">
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
@@ -62,7 +62,7 @@
             <div class="row">
                 {% for product in products %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card h-100 border-0">
+                    <div class="card h-100 border-black">
                         {% if product.image %}
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">

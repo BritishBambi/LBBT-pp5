@@ -51,6 +51,8 @@ Checkout:
 
 Account Page:
 
+Blog: 
+
 ## Database Schema
 
 I knew going into the project that custom models were going to be required when building the site. The intention was always to use Allauth to handle all the user authentication.
@@ -68,9 +70,14 @@ Product Listing Page:
 
 Product Page:
 
+Product Review
+
 Bag:
 
 Checkout:
+
+User Account:
+
 
 ## Future Features
 
