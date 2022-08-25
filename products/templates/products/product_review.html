@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <!-- Product name -->
+            <h3 class="card-title text-center ">Review for {{ product.name }}</h3>
+            <br>
+            <form method="post" action="" role="form">
+                <!-- Form to write/score product review -->
+                {% csrf_token %}
+                <div class="input-field">
+                    
+                </div>
+                <div class="input-field">
+                    <label for="textarea1">Review</label>
+                    <button type="submit" name="action" class="waves-effect waves-light btn">Rate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

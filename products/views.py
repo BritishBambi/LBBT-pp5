@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Recipe
@@ -72,3 +73,15 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def reviewProduct(request, product_id):
+
+    product = Product.objects.get(id=product_id)
+
+    context = {
+        'product': product,
+    }
+
+    return render(request, 'products/product_review.html', context)
