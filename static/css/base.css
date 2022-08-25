@@ -123,6 +123,11 @@ h2 {
     color: #aab7c4;
 }
 
+.order-history{
+    max-height: 416px;
+    overflow-y: auto;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
