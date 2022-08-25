@@ -37,6 +37,8 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/e7fc5002ce.js" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -60,7 +62,8 @@
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search our site" aria-label="Search Bar">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit" aria-label="Search Button">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit"
+                                aria-label="Search Button">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -141,8 +144,10 @@
     {% block page_header %}
     {% endblock %}
 
-    {% block content %}
-    {% endblock %}
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 
     {% block postloadjs %}
     <script type="text/javascript">
