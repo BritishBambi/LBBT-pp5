@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, HttpResponseRedirect, get_object_or_404
+from django.shortcuts import render, redirect, reverse, \
+     HttpResponseRedirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -66,9 +67,8 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to render an individual product detail page"""
 
-    # product = get_object_or_404(Product, pk=product_id)
     product = Product.objects.get(id=product_id)
-    recipies = Recipe.objects.get(product=product)
+    recipies = Recipe.objects.filter(product=product)
 
     reviews = Review.objects.filter(product=product)
     reviews_avg = reviews.aggregate(Avg('rate'))
@@ -141,7 +141,19 @@ def view_review(request, product_id, username):
 
 def add_product(request):
     """ Add a product to the store """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(
+                request, 'Failed to add product.\
+                     Please ensure the form is valid.')
+    else:
+        form = ProductForm()
+
     template = 'products/add_product.html'
     context = {
         'form': form,

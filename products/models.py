@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
+default_image = 'https://res.cloudinary.com/jojocloudci/image/upload/v1656561920/ez8n8onczraub6ag83ua.jpg'
+
 
 class Category(models.Model):
     """Model to create the product catagory"""
@@ -27,7 +29,7 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image = CloudinaryField('image', default='placeholder.jpg')
+    image = CloudinaryField('image', default=default_image)
 
     def __str__(self):
         return self.name
