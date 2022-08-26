@@ -6,7 +6,7 @@ from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from .models import Product, Category, Recipe, Review
-from .forms import RateForm
+from .forms import RateForm, ProductForm
 
 # Create your views here.
 
@@ -134,6 +134,17 @@ def view_review(request, product_id, username):
     context = {
         'review': review,
         'product': product,
+    }
+
+    return render(request, template, context)
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
     }
 
     return render(request, template, context)
