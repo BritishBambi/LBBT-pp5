@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://lbbt.herokuapp.com/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/bag/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=puddings</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=cakes</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=cheesecakes</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=tarts</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=pies</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=vegan</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=puddings,cakes,cheesecakes,tarts,pies,vega</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=donuts</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=biscuits</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=cupcakes</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=pastry</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/?category=donuts,biscuits,cupcakes,pastry</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/about_us/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/19/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/17/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/9/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/2/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/5/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/3/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/1/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/13/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/20/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/16/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/11/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/18/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/10/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/4/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/12/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/15/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/7/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/14/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/8/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/products/6/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/19/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/17/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/9/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/2/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/5/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/3/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/1/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/13/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/20/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/16/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/11/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/18/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/10/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/4/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/12/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/15/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/7/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/14/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/8/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=/products/6/rate/</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F19%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F17%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F2%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F5%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F3%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F1%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F13%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F20%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F16%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F11%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F18%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F4%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F12%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F15%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F14%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F8%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/signup/?next=%2Fproducts%2F6%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F19%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F17%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F9%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F2%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F5%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F3%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F1%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F13%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F20%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F16%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F11%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F18%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F10%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F4%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F12%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F15%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F7%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F14%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F8%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://lbbt.herokuapp.com/accounts/login/?next=%2Fproducts%2F6%2Frate%2F</loc>
+  <lastmod>2022-08-26T23:53:53+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>
