@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <!-- Simple container for 403 -->
 <div class="container">
     <div class="row">
-        <div>
+        <div class="col-12 col-lg-6 bg-white border-black text-center">
             <h2>403 YOU ARE NOT AUTHORIZED TO VIEW THIS PAGE</h2>
             <a href="{% url 'home' %}" class="btn">Return Home</a>
         </div>
