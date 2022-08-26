@@ -16,12 +16,19 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 <a href="{{ product.image.url }}" target="_blank">
-                    <img id="product-image" class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <img id="product-image" class="card-img-top img-fluid" src="{{ product.image.url }}"
+                        alt="{{ product.name }}">
                 </a>
                 <br><br>
                 <h3 class="text-center">{{ product.name }}</h3>
                 <h4 class="text-center">Rated <b>{{ reviews_avg.rate__avg|floatformat:"-1" }}</b> by
                     <b>{{ reviews_count }}</b> {% if reviews_count == 1 %}person{% else %}people{% endif %}</h4>
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a class="btn btn-info" href="{% url 'edit_product' product.id %}">Edit</a>
+                    <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                </small>
+                {% endif %}
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
