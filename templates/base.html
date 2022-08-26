@@ -149,6 +149,37 @@
         {% endblock %}
     </main>
 
+    <footer class="d-flex flex-column justify-content-center px-4 bg-white border-black">
+        <div class="d-flex">
+            <ul class="social-channels d-flex justify-content-evenly gap mx-auto">
+                <li class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank"
+                        aria-label="Go to our Facebook page (opens in new tab)" rel="noopener">
+                        <i class="fab fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-icons">
+                    <a href="https://www.instagram.com" target="_blank"
+                        aria-label="Go to our Instagram page (opens in new tab)" rel="noopener">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-icons">
+                    <a href="https://www.twitter.com" target="_blank"
+                        aria-label="Go to our Twitter page (opens in new tab)" rel="noopener">
+                        <i class="fab fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="social-icons">
+                    <a href="https://www.youtube.com" target="_blank"
+                        aria-label="Go to our YouTube page (opens in new tab)" rel="noopener">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
