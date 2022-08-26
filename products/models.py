@@ -2,13 +2,15 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
-default_image = 'https://res.cloudinary.com/jojocloudci/image/upload/v1656561920/ez8n8onczraub6ag83ua.jpg'
+DEFAULT_IMAGE = ('https://res.cloudinary.com/jojocloudci/\
+    image/upload/v1656561920/ez8n8onczraub6ag83ua.jpg')
 
 
 class Category(models.Model):
     """Model to create the product catagory"""
 
     class Meta:
+        """ Returns category plural name and friendly name """
         verbose_name_plural = 'Catagories'
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -17,6 +19,7 @@ class Category(models.Model):
         return self.name
 
     def get_freindly_name(self):
+        """Retruns the category by its friendly name """
         return self.friendly_name
 
 
@@ -28,8 +31,9 @@ class Product(models.Model):
     name = models.CharField(max_length=254)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image = CloudinaryField('image', default=default_image)
+    rating = models.DecimalField(max_digits=6, decimal_places=2,
+                                 null=True, blank=True)
+    image = CloudinaryField('image', default=DEFAULT_IMAGE)
 
     def __str__(self):
         return self.name

@@ -3,7 +3,11 @@ from .models import UserProfile
 
 
 class UserProfileForm(forms.ModelForm):
+    """ A form that allows the user to save
+    their delivery information to their
+    profile for easier use of purchase at checkout """
     class Meta:
+        """The user field is not needed to be edited """
         model = UserProfile
         exclude = ('user',)
 
@@ -30,5 +34,6 @@ class UserProfileForm(forms.ModelForm):
                 else:
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
-            self.fields[field].widget.attrs['class'] = 'border-black rounded-0 profile-form-input'
+            self.fields[field].widget.attrs['class'] = ('border-black \
+                rounded-0 profile-form-input')
             self.fields[field].label = False

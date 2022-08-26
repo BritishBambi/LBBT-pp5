@@ -1,6 +1,6 @@
 from django import forms
-from .widgets import CustomClearableFileInput
 from products.models import Review, RATE_CHOICES, Product, Category
+from .widgets import CustomClearableFileInput
 
 
 class RateForm(forms.ModelForm):
@@ -20,12 +20,17 @@ class RateForm(forms.ModelForm):
 
 
 class ProductForm(forms.ModelForm):
-
+    """
+    Form used for adding and editing products using the management
+    screen as a super user
+    """
     class Meta:
+        """ Gives all the form fields to the product model """
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
