@@ -40,6 +40,8 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
         - Acceptance Criteria: User is able to securely Log Into account using provided credentials during sign up. User is able to securely log out of account and any private information is protected once done so.
     - User Story - Edit Account: As a user I want to edit my site account, so that I can update the credentials used for logging in/out and managing my email address.
         - Acceptance Criteria: User Is able to update their own account information via all auth templates
+    - User Story - Delete Account: As a User, I would like to be able to delete my account, so that I have full control over the information that is stored about me
+        - Acceptance Criteria: A user will be given a button that when pressed will remove their account from the database. If this is done correctly then their user data and any models attached to it will be removed from the database.
 3. Site Purpose
     - User Story - About us: As a user, I want to read a general guide/history about the site/company to make an informed purchase decision or gain brand loyalty.
         - Acceptance Criteria: Have an accessible About Us page that provides the user with a brief but ample explanation to the site history.
@@ -58,10 +60,16 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
         - Acceptance Criteria: The form is able to be submitted and contains user review information including some text and a score out of 5. The product will then be connected to the product model to be accessed by the product details view.
     - User Story - Read Product Reviews: As a User, I want to read product reviews so that I can make an informed purchasing decision before placing an order for a product.
         - Acceptance Criteria: Any reviews are loaded by the product details view that match the product id. Existing Reviews are rendered into the product details template to be viewed by users
+    - User Story - Respond to User Reviews: As an admin, I want to respond to user reviews, so that I can engage with users more directly in regard to product feedback and critique.
+        - Acceptance Criteria: A comment will appear on an existing user review highlighted as an admin response.
 8. Digital Marketing
     - User Story - SEO: As a Site Owner, I would like to enhance the sites Search Engine Optimisation, so that ultimately the site has the ability to perform well in search results and can be found with ease
         - Acceptance Criteria: Ensure that meta keywords are present across website pages to boost SEO. Ensure the necessary files are in place so spiders have a guide to the site and boost SEO score
 9. Blog
+    - User Story - Make Blog Post: As an admin, I would like to be able to add a blog post to the site, so that we can easily add posts, recipes and trends to the site
+        - Acceptance Criteria: When a superuser is logged into their account, then they will have the ability to create a new blog post
+    - User Story - View Blog Post: As a User, I would like to be able to read blog posts, so that I can keep up to date on the company and find out all the latest baking trends and recipes
+        - Acceptance Criteria: Users can navigate to the blog post page, where they are presented with all the blog posts that are available
 10. User Profiile
 
 ### Skeleton Plane
@@ -74,7 +82,11 @@ Home page: The home page will welcome the users to the site and give a clear des
 
 Product List Page:
 
+![Screenshot of product listing wireframe](assets/screenshots/product-listing-wireframe.PNG "Products Wireframe")
+
 Product Detail Page
+
+![Screenshot of product detail wireframe](assets/screenshots/product-wireframe.PNG "Product details Wireframe")
 
 Bag:
 
@@ -173,12 +185,11 @@ User Profile:
 
 ### Review Comments/Likes
 
-This would allow further input and interaction from Users. Forms would be created so that comments would be left under reviews that could be liked or disliked to reflect public opinion. This would add a deeper user meaning to reviews and would inspire discussion on Reviews themselves rather than the game in general. This would be an ideal feature to add next into the project.
+This would allow further input and interaction from Users. Forms would be created so that comments would be left under reviews that could be liked or disliked to reflect public opinion. This would add a deeper user meaning to reviews and would inspire discussion on Reviews themselves rather than the product in general. This would be an ideal feature to add next into the project.
 
 ### Review Admin Response
 
 This would highlight a review with a "site owner response" banner so that any specific critiques or feedback from a user is highlighted as being responded to. This means users can easily find products that are being monitored by active response from the admin team. This builds more of a positive look for the site by engaging with users more directly in regards to products.
-
 
 ## Testing
 
