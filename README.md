@@ -1,10 +1,17 @@
 # Little Ben's Big Treats
 
+My website is a digital e-commerce site with a theme around baking and sweet treats. The site features a range of products baked and created by a team of professional bakers with the intention of baking and delivering them to the end user. A user is able to purchase any product from the site as well as view baking recipes. The core of the site is to encourage purchasing of the products but also to get the user interested in baking as a hobby.
+
 [Link to Deployed site](https://lbbt.herokuapp.com)
 
 ## UX 
 
 ### CRUD
+
+Product: Create, Read, Update, Delete
+User/Profile: Create, Read, Update
+Order: Create, Read
+Review: Create, Read
 
 ### Strategy Plane
 
@@ -27,19 +34,43 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
     - User Story - Heroku Deployment: As a Developer, I want to Deploy my project to Heroku so that the website can be accessed with all of the libraries and requirements available.
         - Accetpance Criteria: The site will be accessible via a live Heroku link. All features/libraries from the development version will carry over to the live Heroku version
 2. User Accounts
+    - User Story - User Registration: As a user, I want to register for the website, so that I can manage and place orders from the store with saved info.
+        - Acceptance Criteria: User is able to access the allauth user registration view. All the user information is saved and they can now sign in/out of the site
+    - User Story - Account Log in/Out: As a User, I would like to be able to get in and out of my account, so that I can keep my account secure and access my own details
+        - Acceptance Criteria: User is able to securely Log Into account using provided credentials during sign up. User is able to securely log out of account and any private information is protected once done so.
+    - User Story - Edit Account: As a user I want to edit my site account, so that I can update the credentials used for logging in/out and managing my email address.
+        - Acceptance Criteria: User Is able to update their own account information via all auth templates
 3. Site Purpose
-4. Product Viewing
-5. Shopping Cart
+    - User Story - About us: As a user, I want to read a general guide/history about the site/company to make an informed purchase decision or gain brand loyalty.
+        - Acceptance Criteria: Have an accessible About Us page that provides the user with a brief but ample explanation to the site history.
+4. Products
+    - User Story - Product Search: As a User, I would like to be able to search for products, so that I can find the product I am looking for easily
+        - Acceptance Criteria: Users will have easy access to search functionality from anywhere on the website. When a query is entered the product listings will display all products that match their query.
+    - User Story - Product Listing Page: As a User, I would like to be able to view summary details of a list of products so that I can quickly narrow down the products that I am interested in
+        - Acceptance Criteria: When a user searches for a product, then the products are displayed in a listed summary format. All products matching the query, category, or all products are visible
+
+5. Shopping Bag
+    - User Story - View bag: As a User, I would like to be able to view the contents of my shopping cart, so that I can confirm the details prior to proceeding to purchase
+        - Acceptance Criteria: User is able to access their bag from any location on the site. The view is able to render all products that have been saved to the bag accurate to the user input
 6. Checkout
-7. Order Status
-8. Product Review
-9. Marketing and SEO
+7. Product Review
+    - User Story - Review Product: As a user, I would like to review a product so that I can help inform other users about a product and give my personal feedback
+        - Acceptance Criteria: The form is able to be submitted and contains user review information including some text and a score out of 5. The product will then be connected to the product model to be accessed by the product details view.
+    - User Story - Read Product Reviews: As a User, I want to read product reviews so that I can make an informed purchasing decision before placing an order for a product.
+        - Acceptance Criteria: Any reviews are loaded by the product details view that match the product id. Existing Reviews are rendered into the product details template to be viewed by users
+8. Digital Marketing
+    - User Story - SEO: As a Site Owner, I would like to enhance the sites Search Engine Optimisation, so that ultimately the site has the ability to perform well in search results and can be found with ease
+        - Acceptance Criteria: Ensure that meta keywords are present across website pages to boost SEO. Ensure the necessary files are in place so spiders have a guide to the site and boost SEO score
+9. Blog
+10. User Profiile
 
 ### Skeleton Plane
 
 #### Wireframes
 
 Home page: The home page will welcome the users to the site and give a clear description as to the purpose of the site. The graphics will be familiar to gamers to make sure they immedietly feel welcome.
+
+![Screenshot of home wireframe](assets/screenshots/home-wireframe.PNG "Home Wireframe")
 
 Product List Page:
 
@@ -53,35 +84,107 @@ Account Page:
 
 Blog: 
 
+### Surface
+
+- Font
+
+The main site headings used the DynaPuff font as it maintained a childlike/icing sort of texture that I think fit the theme of the site very well
+
+![Screenshot of heading font](assets/screenshots/dyna-puff.PNG "DynaPuff")
+
+The body of the site used the Poppins font as it was easy to read at a range of screen sizes and allows the site content to be accesible to a range of users
+
+![Screenshot of body font](assets/screenshots/poppins.PNG "Poppins")
+
 ## Database Schema
 
-I knew going into the project that custom models were going to be required when building the site. The intention was always to use Allauth to handle all the user authentication.
+I knew going into the project that custom models were going to be required when building the site. The intention was always to use Allauth to handle all the user authentication. This meant that the User model would be very involved across multiple sections of my website. Things such as an order, checkout and bag would all need to relate to the user who saved it and ensuring that the whole process would relate back to the user model, including the profile. The user and profile go hand in hand and would ensure that information could be saved to the user profile to be used across the rest of the site such as order history and delivery information.
+
+![Screenshot of database](assets/screenshots/database-screenshot.PNG "Database")
 
 
 ## Features
 
 Home Page:
 
-The Home Page welcomes the user into the site with a clear heading and description as to what the site does. From here the user can easily find some of the key features and offers of the site. 
+The Home Page welcomes the user into the site with a clear heading and description as to what the site does. From here the user can easily find some of the key features and offers of the site. All of the site headers are made a focal point and the user can easily begin to start navigating the site.
 
-Nav Bar: The nav bar has a simple design that makes it easy for the user to find available links and the site logo. Clicking on the site logo will also bring the user to the home page from any other page on the site. The links are capitalized and easy to locate. The search bar is also ingrained into the nav bar which makes it easy for the user to make a product search from any location on the site. A direct link to the user account page and the users bag is also highlighted at the end. This allows all of the main site features to be easily accessed by the user.
+![Screenshot of home screen](assets/screenshots/home-screenshot.PNG "Home Screen")
+
+Nav Bar: 
+
+The nav bar has a simple design that makes it easy for the user to find available links and the site logo. Clicking on the site logo will also bring the user to the home page from any other page on the site. The links are capitalized and easy to locate. The search bar is also ingrained into the nav bar with a toggle button which makes it easy for the user to make a product search from any location on the site. A direct link to the user account page and the users bag is also highlighted at the end. This allows all of the main site features to be easily accessed by the user.
+
+![Screenshot of nav bar](assets/screenshots/nav-screenshot.PNG "Nav Bar")
+
+USER STORY: Search Products:
+
+    - As a User, I would like to be able to search for products, so that I can find the product I am looking for easily
+
+
+
+On mobile the nav bar will squish down into a "burger bun" icon which when pressed will present the user with the nav bar options
+
+![Screenshot of mobile nav bar](assets/screenshots/mobile-nav-screenshot.PNG "Nav Bar")
 
 Product Listing Page:
 
+When a user searches for a product or uses one of the navigation links to view a category, a listing of products is rendered. A helpful card containing some key information regarding to the product is easily shown to the user. From here a super user is also able to easily make quick changes to a product with an edit and a delete button. By clicking onto the product picture a user is able to view details about a particular product
+
+![Screenshot of product listings](assets/screenshots/products-screenshot.PNG "Product Listings")
+
 Product Page:
 
-Product Review
+The product page takes the product id of the selected product from either the product listings page or an external link and renders information onto a template for the user to read. From here a user can access some detailed information relating to the product including a full size photo, description and even a basic recipe similar to the product. From here a user is also able to quickly add a product to the bag where it can then be brought into the checkout for purchase. A user is able to read reviews relating to the product as well as see the total score calculated on the average of review scores.
+
+![Screenshot of product detail](assets/screenshots/products-screenshot.PNG "Product Details")
+
+Product Recipe:
+
+On all products that have a recipe, a recipe button is made viewable that when clicked will open a popup window containing a product recipe. It intended to not be a 1 to 1 recipe resembling the product the user will purchase and is instead an effort to try encourage more people to bake and to use the site as a recipe index as well to find more food to bake.
+
+![Screenshot of product recipe](assets/screenshots/recipe-screenshot.PNG "Product Recipe")
+
+Add to Bag:
+
+On every productt page an add to bag button is available. When this is pressed the product is saved to the current users bag and a message will display to inform the user that the process has been completed. 
+
+![Screenshot of add to bag](assets/screenshots/add-to-bag-screenshot.PNG "Add to bag")
+
+USER STORY: Add to Bag:
+
+    - As a User, I would like to be able to add products that I want to buy to my shopping cart so that I can proceed to purchase them
+
+Product Review:
+
+![Screenshot of review](assets/screenshots/review-screenshot.PNG "Product Review")
+
+The Review section under a product details page will display the user reviews for the sellected product. It will display a limited preview to make sure the page is not taken up by lengthy reviews and instead opts the user to click a "View Review" button which will show just the specified review in full detail. Here a user can also select a score out of 5 which is then added onto the product details page to calculate the product average.
+
+About Us:
 
 Bag:
 
 Checkout:
 
-User Account:
-
+User Profile:
 
 ## Future Features
 
+### Review Comments/Likes
+
+This would allow further input and interaction from Users. Forms would be created so that comments would be left under reviews that could be liked or disliked to reflect public opinion. This would add a deeper user meaning to reviews and would inspire discussion on Reviews themselves rather than the game in general. This would be an ideal feature to add next into the project.
+
+### Review Admin Response
+
+This would highlight a review with a "site owner response" banner so that any specific critiques or feedback from a user is highlighted as being responded to. This means users can easily find products that are being monitored by active response from the admin team. This builds more of a positive look for the site by engaging with users more directly in regards to products.
+
+
 ## Testing
+
+A mix of Manual and Automated testing was used in this project to make sure every element of the site worked in the intended manner.
+
+A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file
 
 ## Technologies
 
@@ -95,6 +198,25 @@ User Account:
     - Django was used as the main python framework in the development of this project
 
 - Python
+    - asgiref==3.5.2
+    - cloudinary==1.29.0
+    - coverage==6.4.4
+    - dj-database-url==0.5.0
+    - dj3-cloudinary-storage==0.0.6
+    - Django==3.2.15
+    - django-allauth==0.41.0
+    - django-cloudinary-storage==0.3.0
+    - django-countries==7.2.1
+    - django-crispy-forms==1.14.0
+    - gunicorn==20.1.0
+    - oauthlib==3.2.0
+    - Pillow==9.2.0
+    - psycopg2==2.9.3
+    - python3-openid==3.2.0
+    - pytz==2022.1
+    - requests-oauthlib==1.3.1
+    - stripe==4.1.0
+    - sqlparse==0.4.2
 
 - Heroku
     - Was used as the cloud based platform to deploy the site on
@@ -109,6 +231,8 @@ User Account:
     - Was used for storing and updating the project files
 
 ## Bugs
+
+While trying to ensure the live version of the site was fully functional 
 
 ## Deployment
 
