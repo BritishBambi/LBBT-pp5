@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 from checkout.models import Order
 from .models import UserProfile
@@ -32,6 +33,23 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+
+def delete_profile(request):
+    """
+    Checks for a valid post request to allow the user to
+    delete their own user account. Ensures this can only be
+    done by the correct user within the template.
+    """
+    user = request.user
+
+    if request.method == 'POST':
+        logout(request)
+        user.delete()
+        messages.success(request, 'Account deleted!')
+        return redirect(reverse('home'))
+
+    return render(request, 'profiles/delete_profile.html')
 
 
 @login_required()

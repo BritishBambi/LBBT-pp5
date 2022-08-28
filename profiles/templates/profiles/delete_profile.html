@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<!-- Page Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2 bg-white border-black">
+            {% if user.is_authenticated and user == request.user %}
+            <form method="post" action="" role="form" id="delete-form">
+                <!-- Form to confirm Account deletion -->
+                {% csrf_token %}
+                <h2>Are you sure you want to Delete your profile?</h2>
+                <p>This action cannot be reversed</p>
+                <button type="submit" name="action" class="btn btn-danger rounded border-black mb-3">Delete</button>
+            </form>
+            {% else %}
+            <!-- Error displayed when user is not authorized -->
+            <h2>This is not your profile</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

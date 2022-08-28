@@ -60,7 +60,6 @@ class Review(models.Model):
         return self.product.name
 
 
-
 class Recipe(models.Model):
     """Product recipe to be detailed on a product page"""
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

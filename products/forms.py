@@ -20,6 +20,9 @@ class RateForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+    """
+    Form used to submit a review comment from the site admins
+    """
     text = forms.CharField(widget=forms.Textarea(
         attrs={'class': 'text-black'}), required=True)
 

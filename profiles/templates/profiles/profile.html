@@ -21,6 +21,9 @@
             <ul style="font-size: 20px;">
             </ul>
             <p class="lead"></p>
+            <a href="{% url 'account_change_password' %}" class="btn btn-info rounded-0 ">Change Password</a>
+                <a href="{% url 'account_email' %}" class="btn btn-info rounded-0">Change Email</a>
+                <a href="{% url 'delete_profile' %}" class="btn btn-danger rounded-0">Delete Account</a>
         </div>
     </div>
     <div class="row">
@@ -48,10 +51,9 @@
                         {% for order in orders %}
                         <tr>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}"
-                                        title="{{ order.order_number }}">
-                                            {{ order.order_number|truncatechars:6 }}
-                                        </a>
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}">
+                                    {{ order.order_number|truncatechars:6 }}
+                                </a>
                             </td>
                             <td>{{ order.date }}</td>
                             <td>
