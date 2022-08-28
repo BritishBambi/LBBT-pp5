@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+<!-- Extra CSS for the success page -->
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
@@ -19,6 +20,7 @@
     <div class="col-lg-8 mt-3 offset-md-2 bg-white text-center border-black rounded p-5 w-100">
         <div class="container">
             <div class="row">
+                <!-- Thank you Message -->
                 <div class="col">
                     <hr>
                     <h2 class="logo-font mb-4">Thank You</h2>
@@ -29,6 +31,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-lg-7">
+                    <!-- All the order information rendered in a line -->
                     <div class="order-confirmation-wrapper p-2 border">
                         <div class="row">
                             <div class="col-12 col-md-4">
@@ -194,6 +197,7 @@
 
             <div class="row">
                 <div class="col-12 col-lg-7 text-right">
+                    <!-- Checks if the user came from the profile page to direct them back -->
                     {% if from_profile %}
                     <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2">
@@ -201,9 +205,9 @@
                         </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
-                {% else %}
-                    <a href="{% url 'products' %}"
-                        class="btn btn-black rounded-0 my-2">
+                    {% else %}
+                    <!-- Suggests further products to purchase -->
+                    <a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-gifts"></i>
                         </span>

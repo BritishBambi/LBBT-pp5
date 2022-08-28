@@ -1,4 +1,4 @@
-from django.shortcuts import render,  redirect, reverse, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 
 from products.models import Product
@@ -6,11 +6,15 @@ from products.models import Product
 
 
 def view_bag(request):
+    """ A simple view to render the bag page """
 
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
+    """A view to add an item to the bag
+    takes all information about the item
+    and quantity into account """
 
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))

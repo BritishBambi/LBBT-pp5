@@ -1,10 +1,11 @@
+import json
+
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 
 import stripe
-import json
 
 from bag.contexts import bag_contents
 from products.models import Product
@@ -16,6 +17,9 @@ from .models import Order, OrderLineItem
 
 @require_POST
 def cache_checkout_data(request):
+    """ View to process strip payment and dump the order
+    information to be saved and rendered later """
+
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -32,6 +36,8 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
+    """ View to complete the checkout process including renderin
+    the order form and pass the order onto stripe"""
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -125,26 +131,6 @@ def checkout(request):
 
     return render(request, template, context)
 
-
-def checkout_success(request, order_number):
-    """
-    Handle successful checkouts
-    """
-    save_info = request.session.get('save_info')
-    order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
-
-    if 'bag' in request.session:
-        del request.session['bag']
-
-    template = 'checkout/checkout_success.html'
-    context = {
-        'order': order,
-    }
-
-    return render(request, template, context)
 
 def checkout_success(request, order_number):
     """

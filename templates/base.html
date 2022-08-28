@@ -1,7 +1,9 @@
 {% load static %}
 
+<!-- Document Start -->
 <!doctype html>
 <html lang="en">
+<!-- Head -->
 
 <head>
 
@@ -9,9 +11,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Meta Description -->
     <meta name="decsription" content="Little Ben's Sweet Treats an online baking store based in Bradford, England">
+    <!-- Meta Keywords -->
     <meta name="keywords"
         content="{% block keywords %}{% endblock %}, baking uk, desserts, sweet treats, order dessert online, desserts in Bradford, best desserts to order">
+    <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32"
         href="https://res.cloudinary.com/jojocloudci/image/upload/v1661556714/LBBT_logo_without_words_azbxup.png">
     {% endblock %}
@@ -20,9 +25,12 @@
     {% endblock %}
 
     {% block corecss %}
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+    <!-- Base CSS -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -30,37 +38,47 @@
     {% endblock %}
 
     {% block corejs%}
+    <!-- Jquery Slim for bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
+    <!-- Primary Jquery for JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Popper JS from bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
     </script>
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
+    <!-- Font Awseome -->
     <script src="https://kit.fontawesome.com/e7fc5002ce.js" crossorigin="anonymous"></script>
-    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Stripe Script -->
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
+    <!-- Extra JS block -->
     {% block extra_js %}
     {% endblock %}
 
+    <!-- Site Title -->
     <title>Little Ben's Big Treats {% block extra_title %}{% endblock %}</title>
 </head>
 
+<!-- Body Start -->
 <body>
     <header class="container-fluid fixed-top border-black">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+                <!-- Site Logo -->
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <img src="https://res.cloudinary.com/jojocloudci/image/upload/v1661093256/logo_wide_2_lrbimt.png"
                         alt="LBBT Logo">
                 </a>
             </div>
+            <!-- Toggled Search bar -->
             <div id="search_container" class="col-12 col-lg-4 my-auto py-1 py-lg-0 hidden">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
@@ -82,6 +100,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
+                            <!-- Account Tab -->
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
@@ -101,6 +120,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
+                        <!-- Bag preview and link -->
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_bag' %}">
                             <div class="text-center">
@@ -118,6 +138,7 @@
                 </ul>
             </div>
         </div>
+        <!-- Navigation Features -->
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
@@ -131,6 +152,7 @@
     </header>
 
     {% if messages %}
+    <!-- Display Messages -->
     <div class="message-container">
         {% for message in messages %}
         {% with message.level as level %}
@@ -164,9 +186,6 @@
                     clear: left;
                     font: 14px Helvetica, Arial, sans-serif;
                 }
-
-                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
             </style>
             <div id="mc_embed_signup" class="d-flex justify-content-evenly gap mx-auto">
                 <form
@@ -221,6 +240,7 @@
             <!--End mc_embed_signup-->
         </div>
         <div class="d-flex">
+            <!-- Social Media Channels -->
             <ul class="social-channels d-flex justify-content-evenly gap mx-auto">
                 <li class="social-icons">
                     <a href="https://www.facebook.com" target="_blank"
@@ -250,6 +270,7 @@
         </div>
     </footer>
 
+    <!-- Load javascript and show toasts -->
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
