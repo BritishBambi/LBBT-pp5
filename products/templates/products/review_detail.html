@@ -43,7 +43,7 @@
             <p>{{ reply.text }}</p>
             <br>
             {% if request.user.is_superuser %}
-            <a href="" class="btn btn-danger rounded mb-5">Delete Comment</a>
+            <a href="{% url 'delete_comment' product.id user.username %}" class="btn btn-danger rounded mb-5">Delete Comment</a>
             {% endif %}
         </div>
     </div>

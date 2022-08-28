@@ -219,6 +219,32 @@ def review_comment(request, product_id, username):
 
 
 @login_required()
+def delete_comment(request, username, product_id):
+    """
+    Checks for a valid POST request from the delete_review page
+    to simply delete the exisitng review model. The user will then
+    be returned to the product page.
+    """
+    user = get_object_or_404(User, username=username)
+    product = Product.objects.get(id=product_id)
+    review = Review.objects.get(user=user, product=product)
+    comment = Comment.objects.filter(review=review)
+
+    if request.method == 'POST':
+        comment.delete()
+        messages.success(request, 'Comment Deleted')
+        return HttpResponseRedirect(
+            reverse('view_review', args=[product_id]))
+
+    context = {
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, 'products/delete_review.html', context)
+
+
+@login_required()
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
