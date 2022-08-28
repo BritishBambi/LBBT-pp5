@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+<!-- Page container -->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6 bg-white border-black" id="review-box">
+            {% if user.is_authenticated and user == review.user %}
+            <form method="post" action="" role="form" id="delete-form">
+                <!-- Delete confirmation form -->
+                {% csrf_token %}
+                <h2>Are you sure you want to Delete your review?</h2>
+                <button type="submit" name="action" class="btn btn-danger border-black mb-4">Delete</button>
+            </form>
+            {% else %}
+            <!-- Error if user is not authorized to delete review -->
+            <h2>This is not your review</h2>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

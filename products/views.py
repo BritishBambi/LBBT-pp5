@@ -130,7 +130,7 @@ def view_review(request, product_id, username):
     """ A view that finds and renders all existing
     reviews for a product in the template """
 
-    user = request.user
+    user = get_object_or_404(User, username=username)
     product = Product.objects.get(id=product_id)
     review = Review.objects.get(user=user, product=product)
     comment = Comment.objects.filter(review=review)
@@ -150,6 +150,31 @@ def view_review(request, product_id, username):
     }
 
     return render(request, template, context)
+
+
+@login_required()
+def delete_review(request, username, product_id):
+    """
+    Checks for a valid POST request from the delete_review page
+    to simply delete the exisitng review model. The user will then
+    be returned to the product page.
+    """
+    user = get_object_or_404(User, username=username)
+    product = Product.objects.get(id=product_id)
+    review = Review.objects.get(user=user, product=product)
+
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Review Deleted')
+        return HttpResponseRedirect(
+            reverse('product_detail', args=[product_id]))
+
+    context = {
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, 'products/delete_review.html', context)
 
 
 @login_required

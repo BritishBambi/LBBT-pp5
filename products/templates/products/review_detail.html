@@ -26,7 +26,7 @@
             <p class="secondary-content">{{ review.rate }} / 5</p>
             <!-- Delete Button if the current user if authenticated -->
             {% if user.is_authenticated and user == review.user %}
-            <a href="" class="btn btn-danger rounded mb-5">Delete
+            <a href="{% url 'delete_review' product.id user.username %}" class="btn btn-danger rounded mb-5">Delete
                 Review</a>
             {% endif %}
             {% if request.user.is_superuser and comment_exists == False %}

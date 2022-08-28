@@ -208,6 +208,12 @@ footer {
     color: var(--primary-hover-text);
 }
 
+#delete-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
