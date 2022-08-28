@@ -56,6 +56,10 @@ class Review(models.Model):
     text = models.TextField(max_length=3000, blank=True)
     rate = models.PositiveSmallIntegerField(choices=RATE_CHOICES)
 
+    def __str__(self):
+        return self.product.name
+
+
 
 class Recipe(models.Model):
     """Product recipe to be detailed on a product page"""
@@ -65,3 +69,13 @@ class Recipe(models.Model):
 
     def __str__(self):
         return self.product.name
+
+
+class Comment(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    review = models.ForeignKey(Review, on_delete=models.CASCADE)
+    date = models.DateTimeField(auto_now_add=True)
+    text = models.TextField(max_length=3000, blank=True, null=True)
+
+    def __str__(self):
+        return self.user.username

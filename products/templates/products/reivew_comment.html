@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br><br>
+    <div class="row">
+        <div class="col-12 col-lg-6 bg-white border-black" id="review-box">
+            {% if comment_exists == True %}
+            <div id="review-exists">
+                <!-- Error if user has already made a review -->
+                <h2 class="text-center">You Have Already Reviewed This Product!</h2>
+                <a class="btn btn-default border-black mb-4" href="{% url 'product_detail' product.id %}">Go back</a>
+            </div>
+            {% else %}
+            <h3 class="card-title text-center">Comment Reply</h3>
+            <br>
+            <form class="mt-3 text-center" method="post" action="" role="form">
+                <!-- Form to write/score product review -->
+                {% csrf_token %}
+                <div class="review-input-field text-black p-3">
+                    {{ form.text }}
+                </div>
+                <button type="submit" name="action" class="btn-lg btn-default mb-3">Comment</button>
+            </form>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

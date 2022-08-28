@@ -15,7 +15,8 @@
     <div class="row">
         <div class="col-12 col-lg-6 bg-white border-black text-center" id="review-box">
             <!-- Product name -->
-            <h3 class="card-title text-center mt-2">Review for <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h3>
+            <h3 class="card-title text-center mt-2">Review for <a
+                    href="{% url 'product_detail' product.id %}">{{ product.name }}</a></h3>
             <h4> Review by @{{ review.user.username }}</h4>
             </a>
             <p>{{ review.date }}</p>
@@ -28,9 +29,25 @@
             <a href="" class="btn btn-danger rounded mb-5">Delete
                 Review</a>
             {% endif %}
+            {% if request.user.is_superuser and comment_exists == False %}
+                <a href="{% url 'review_comment' product.id user.username %}" class="btn btn-info rounded mb-5">Add
+                    Comment</a>
+            {% endif %}
         </div>
     </div>
+    {% for reply in comment %}
+    <div class="row">
+        <div class="col-12 col-lg-6 bg-white border-black text-center mt-5" id="review-box">
+            <!-- Product name -->
+            <h3 class="card-title text-center mt-2">Admin response</h3>
+            <p>{{ reply.text }}</p>
+            <br>
+            {% if request.user.is_superuser %}
+            <a href="" class="btn btn-danger rounded mb-5">Delete Comment</a>
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
 </div>
-
 
 {% endblock %}

@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
-from .models import Product, Category, Recipe, Review
-from .forms import RateForm, ProductForm
+from .models import Product, Category, Recipe, Review, Comment
+from .forms import RateForm, ProductForm, CommentForm
 
 # Create your views here.
 
@@ -130,15 +130,64 @@ def view_review(request, product_id, username):
     """ A view that finds and renders all existing
     reviews for a product in the template """
 
-    user = get_object_or_404(User, username=username)
+    user = request.user
     product = Product.objects.get(id=product_id)
     review = Review.objects.get(user=user, product=product)
+    comment = Comment.objects.filter(review=review)
+
+    if Comment.objects.filter(review=review, user=user).exists():
+        comment_exists = True
+    else:
+        comment_exists = False
 
     template = 'products/review_detail.html'
 
     context = {
         'review': review,
+        'comment_exists': comment_exists,
         'product': product,
+        'comment': comment,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def review_comment(request, product_id, username):
+    """ A View that checks for a valid post method
+    to save the comment to the product and user """
+
+    product = Product.objects.get(id=product_id)
+    user = User.objects.get(username=username)
+    review = Review.objects.get(user=user, product=product)
+
+    if Comment.objects.filter(review=review, user=user).exists():
+        comment_exists = True
+    else:
+        comment_exists = False
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.review = review
+            comment.save()
+            messages.success(request, 'Comment saved')
+
+            return HttpResponseRedirect(
+                reverse('view_review', args=[product_id, user.username])
+                )
+
+    else:
+        form = CommentForm()
+
+    template = 'products/reivew_comment.html'
+
+    context = {
+        'product': product,
+        'form': form,
+        'comment_exists': comment_exists,
     }
 
     return render(request, template, context)

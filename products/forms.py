@@ -1,5 +1,5 @@
 from django import forms
-from products.models import Review, RATE_CHOICES, Product, Category
+from products.models import Review, RATE_CHOICES, Product, Category, Comment
 from .widgets import CustomClearableFileInput
 
 
@@ -17,6 +17,16 @@ class RateForm(forms.ModelForm):
         """ Gives the text and rate form fields to the Review model """
         model = Review
         fields = ('text', 'rate')
+
+
+class CommentForm(forms.ModelForm):
+    text = forms.CharField(widget=forms.Textarea(
+        attrs={'class': 'text-black'}), required=True)
+
+    class Meta:
+        """ Gives the text and rate form fields to the Review model """
+        model = Comment
+        fields = ('text',)
 
 
 class ProductForm(forms.ModelForm):
