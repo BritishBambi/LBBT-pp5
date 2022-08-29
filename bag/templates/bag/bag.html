@@ -88,13 +88,13 @@
                             {% include "bag/product-info.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price }}</p>
+                            <p class="my-0">£{{ item.product.price }}</p>
                         </td>
                         <td class="py-3 w-25">
                             {% include "bag/quantity-form.html" %}
                         </td>
                         <td class="py-3">
-                            <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </td>
                     </tr>
                     {% endfor %}
@@ -133,7 +133,7 @@
     $('.update-link').click(function (e) {
         var form = $(this).prev('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item and reload on click
     $('.remove-item').click(function (e) {
@@ -148,6 +148,6 @@
             .done(function () {
                 location.reload();
             });
-    })
+    });
 </script>
 {% endblock %}
