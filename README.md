@@ -134,7 +134,6 @@ USER STORY: Search Products:
     - As a User, I would like to be able to search for products, so that I can find the product I am looking for easily
 
 
-
 On mobile the nav bar will squish down into a "burger bun" icon which when pressed will present the user with the nav bar options
 
 ![Screenshot of mobile nav bar](assets/screenshots/mobile-nav-screenshot.PNG "Nav Bar")
@@ -145,11 +144,16 @@ When a user searches for a product or uses one of the navigation links to view a
 
 ![Screenshot of product listings](assets/screenshots/products-screenshot.PNG "Product Listings")
 
+User Story - Product Listing Page:
+
+    - As a User, I would like to be able to view summary details of a list of products so that I can quickly narrow down the products that I am interested in
+
 Product Page:
 
 The product page takes the product id of the selected product from either the product listings page or an external link and renders information onto a template for the user to read. From here a user can access some detailed information relating to the product including a full size photo, description and even a basic recipe similar to the product. From here a user is also able to quickly add a product to the bag where it can then be brought into the checkout for purchase. A user is able to read reviews relating to the product as well as see the total score calculated on the average of review scores.
 
 ![Screenshot of product detail](assets/screenshots/products-screenshot.PNG "Product Details")
+
 
 Product Recipe:
 
@@ -173,23 +177,53 @@ Product Review:
 
 The Review section under a product details page will display the user reviews for the sellected product. It will display a limited preview to make sure the page is not taken up by lengthy reviews and instead opts the user to click a "View Review" button which will show just the specified review in full detail. Here a user can also select a score out of 5 which is then added onto the product details page to calculate the product average.
 
+USER STORY: Review Product
+
+    - As a user, I would like to review a product so that I can help inform other users about a product and give my personal feedback
+
 About Us:
+
+The About us page gives the user a friendly and informative introduction to the site and gives a general purpose. A friendly greeting helps to enchance the business to customer angle and attempts to bridge the gap between these roles. The site features a direct link to the about us from the nav bar and the home screen to bring users onto the page as soon as possible.
+
+![Screenshot of About us](assets/screenshots/about-us.PNG "About us")
+
+USER STORY: About us
+
+    - As a user, I want to read a general guide/history about the site/company to make an informed purchase decision or gain brand loyalty.
 
 Bag:
 
+The user is able to add any product listing on the site straight to a bag. The bag page contains a preview of all the items currently in it with a photo. A rundown of all the pricing and how far away the price is from free delivery. This ensures the customer can always know that the option is available to them if they want to save more money. From a business point of view it also makes sense to push the customer to purchase more product by hitting a certain threshold.
+
+
+![Screenshot of shopping bag](assets/screenshots/bag-screenshot.PNG "Shopping bag")
+
+USER STORY: Add to Bag
+
+    - As a User, I would like to be able to add products that I want to buy to my shopping cart so that I can proceed to purchase them
+
+USER STORY: View Bag
+
+    - As a User, I would like to be able to view the contents of my shopping cart, so that I can confirm the details prior to proceeding to purchase
+
 Checkout:
+
+In the checkout the user is given one final review of all the products that they intend on purchasing with a rundown of the prices of the individual prices and the grand total. A delivery total is also calculated if the total does not meet the threshold. Here the customer can also fill out the checkout form to pass their details to be saved for the order. The user can also check to save these delivery details to their profile by checking the tick box. When the user fills out the form and enters their payment details stripe will process the payment and redner a success page.
+
+![Screenshot of Checkout](assets/screenshots/Checkout-screenshot.PNG "Checkout")
+
+Order History:
+
+Either after a direct purchase from the checkout or from accessing the history from the user profile. The user can access an order details page which will display all the details of the order that was placed. This includes the delivery information as well as the order price. The same order details screen will be emailed to the user at the email provided on sign up if applicable.
 
 User Profile:
 
+Digital Marketing: 
+
+
 ## Future Features
 
-### Review Comments/Likes
-
-This would allow further input and interaction from Users. Forms would be created so that comments would be left under reviews that could be liked or disliked to reflect public opinion. This would add a deeper user meaning to reviews and would inspire discussion on Reviews themselves rather than the product in general. This would be an ideal feature to add next into the project.
-
-### Review Admin Response
-
-This would highlight a review with a "site owner response" banner so that any specific critiques or feedback from a user is highlighted as being responded to. This means users can easily find products that are being monitored by active response from the admin team. This builds more of a positive look for the site by engaging with users more directly in regards to products.
+### Blog
 
 ## Testing
 
@@ -243,7 +277,7 @@ A full detailed breakdown of the testing procedures and methodology can be found
 
 ## Bugs
 
-While trying to ensure the live version of the site was fully functional 
+While trying to ensure the live version of the site was fully functional the email smtp would return a 500 internal server error whenever certain pages would be interacted with. This would include logging in/out, registering and placing orders. To try and fix this I would alter the sendgrid settings and even try generating a new API key. However after not having any luck I opted to try the google smtp which ended up working out. 
 
 ## Deployment
 
@@ -300,6 +334,10 @@ Creating a clone enables you to make a copy of the repository at that point in t
 By forking the GitHub Repository you can make a copy of the original repository to view or change without it effecting the original repository This can be done by logging into GitHub or creating an account.  Locate the repository at https://github.com/BritishBambi/LBBT-pp5 . At the top of the repository, on the right side of the page, select "Fork" from the buttons available. A copy of the repository should now be created in your own repository.
 
 ## Acknowledgements
+
+- My Waypoint project was used as guidance for site elements and the review feature was directly ported over
+- Thanks to My mentor Daisy McGirr for believing in me through the project and for answering the questions I had throughout.
+- The Code Institute e-commerce project was referenced as a walkthrough during production for important steps and as a general guide.
 
 ## Credits
 

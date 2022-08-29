@@ -16,6 +16,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <!-- Left side container with product image and the neame -->
             <div class="image-container my-5">
                 <a href="{{ product.image.url }}" target="_blank">
                     <img id="product-image" class="card-img-top img-fluid" src="{{ product.image.url }}"
@@ -23,9 +24,11 @@
                 </a>
                 <br><br>
                 <h3 class="text-center">{{ product.name }}</h3>
+                <!-- Calculats the review score average based on current reviews -->
                 <h4 class="text-center">Rated <b>{{ reviews_avg.rate__avg|floatformat:"-1" }}</b> by
                     <b>{{ reviews_count }}</b> {% if reviews_count == 1 %}person{% else %}people{% endif %}</h4>
                 {% if request.user.is_superuser %}
+                <!-- Allows the admins to delete or edit a product -->
                 <small class="ml-3">
                     <a class="btn btn-info" href="{% url 'edit_product' product.id %}">Edit</a>
                     <a class="btn btn-danger" href="{% url 'delete_product' product.id %}">Delete</a>
@@ -35,6 +38,7 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="product-details-container mb-5 mt-md-5">
+                <!-- Product Information -->
                 <p class="mb-0"></p>
                 <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                 {% if product.rating %}
@@ -50,6 +54,7 @@
                 </p>
                 {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
+                <!-- Prints out the available recipie if applicable -->
                 {% for recipie in recipies %}
                 <button type="button" class="btn-lg btn-default" data-toggle="modal" data-target="#recipeModal">View
                     Recipe</button>
@@ -73,6 +78,7 @@
                     </div>
                 </div>
                 {% endfor %}
+                <!--  Add to bag form with changing quantity  -->
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     {% csrf_token %}
                     <div class="form-row">
@@ -102,6 +108,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Review button -->
                         <a class="btn-lg btn-default border-black text-black" id="review-btn"
                             href="{% url 'review_product' product.id %}">Review Product</a>
                         <div class="col-12">
@@ -122,6 +129,7 @@
     <div class="row">
         <div class="col-lg-8 mt-3 offset-md-2 border-black">
             <h2 class="text-center">Reviews</h2>
+            <!-- Prints out any available reviews if any exist -->
             {% for review in reviews %}
             <div class="review-container">
                 <p>@{{ review.user.username }}</p>

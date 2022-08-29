@@ -13,6 +13,7 @@
 <div class="container-fluid">
     <div class="row bg-white border-black">
         <div class="col text-center mt-3">
+            <!-- Previews the selected categories for product filtering -->
             <h1 class="logo-font text-black" ><a id="product-heading" href="{% url 'products' %}">Products</a></h1>
             {% for c in current_categories %}
             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
@@ -28,6 +29,7 @@
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb-2 bg-white border-black">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end bg-white">
+                    <!-- Shows the sorting method drop down menu with the current value selected in the preview -->
                     <div class="sort-select-wrapper w-50">
                         <select id="sort-selector"
                             class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -61,9 +63,11 @@
             </div>
             <div class="row">
                 {% for product in products %}
+                <!-- Prints a product card for each product matching the current filters -->
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-black">
                         {% if product.image %}
+                        <!-- Product Image -->
                         <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
@@ -73,12 +77,14 @@
                                 alt="{{ product.name }}">
                         </a>
                         {% endif %}
+                        <!-- Product Name -->
                         <div class="card-body pb-0">
                             <p class="mb-0">{{ product.name }}</p>
                         </div>
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
+                                    <!-- Short preview of product information -->
                                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
@@ -89,11 +95,13 @@
                                     </p>
                                     {% endif %}
                                     {% if product.rating %}
+                                    <!-- Checks for current rate preview -->
                                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
                                         5</small>
                                     {% else %}
                                     <small class="text-muted">No Rating</small>
                                     {% endif %}
+                                    <!-- If the user is an admin they can edit or delete from the card -->
                                     {% if request.user.is_superuser %}
                                     <small class="ml-3">
                                         <a class="btn btn-info" href="{% url 'edit_product' product.id %}">Edit</a>
@@ -105,6 +113,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Prints out the order based on how many products there are and for different devices -->
 
                 {% if forloop.counter|divisibleby:1 %}
                 <div class="col-12 d-sm-none mb-5">
@@ -133,6 +142,7 @@
             </div>
         </div>
     </div>
+    <!-- Back to top function -->
     <div class="btt-button shadow-sm rounded-0 border border-black">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
@@ -142,6 +152,7 @@
 
 {% endblock %}
 
+<!-- Extra JS formoving the current screen back to the top -->
 {% block postloadjs%}
     {{ block.super }}
     <script>
