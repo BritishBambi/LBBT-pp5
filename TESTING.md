@@ -62,5 +62,9 @@ The JavaScript code was checked using the jshint.com validator available at jshi
 TWhen validating by url it discovers a total of 711 warnings relating to the Mailchimp newsletter imported css and the bootstrap code. When validating by direct input the validator also reports a warning about the imported style sheet - or the google font import, the warning only states that it does not check the imported style sheet in direct input mode and can be ignored.
 
 
-## Test Case 04 - Manual HTML Testing - Unregistered User
+## Test Case 04 - HTML Testing
+
+Due to the way Django templates include Django template code in them, and extend other templates, it is not possible to copy the code for each page out of the source html files. Therefore, in order to validate the code correctly, I navigated to the site and accessed the rendered html code through the developer tools of the browser I used during development, Opera GX. I then pasted the code into the HTML validator site
+
+
 
