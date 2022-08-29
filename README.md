@@ -293,9 +293,9 @@ For the future of the business I would like to adapt a blog feature. There the a
 
 ## Testing
 
-A mix of Manual and Automated testing was used in this project to make sure every element of the site worked in the intended manner.
+A mix of Manual and Automated testing was used in this project to make sure every element of the site worked in the intended manor.
 
-A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file
+A full detailed breakdown of the testing procedures and methodology can be found in the testing.md file [here](TESTING.md)
 
 ## Technologies
 

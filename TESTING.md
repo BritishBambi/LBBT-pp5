@@ -64,7 +64,30 @@ TWhen validating by url it discovers a total of 711 warnings relating to the Mai
 
 ## Test Case 04 - HTML Testing
 
-Due to the way Django templates include Django template code in them, and extend other templates, it is not possible to copy the code for each page out of the source html files. Therefore, in order to validate the code correctly, I navigated to the site and accessed the rendered html code through the developer tools of the browser I used during development, Opera GX. I then pasted the code into the HTML validator site. Across all the pages I tested I some consistent warnings and errors that were created by the inputed elements such as bootstrap, stripe and mailchimp. So I was unable to modify these, however during this testing process I was able to identify some issues in my html that I was able to correct.
+Due to the way Django templates include Django template code in them, and extend other templates, it is not possible to copy the code for each page out of the source html files. Therefore, in order to validate the code correctly, I navigated to the site and accessed the rendered html code through the developer tools of the browser I used during development, Opera GX. I then pasted the code into the HTML validator site. Across all the pages I tested I some consistent warnings and errors that were created by the inputed elements such as bootstrap, stripe and mailchimp. So I was unable to modify these, however during this testing process I was able to identify some issues in my html that I was able to correct. There was also the aria-label that was inserted as part of the ImageField  form in the edit products fields. All the warnings/messages shown in the screenshots now are caused by external methods and not code that is part of my base HTML/templates. This was an important process to iron out all of these hidden issues.
+
+* Screenshots of the validator reports are here:
+    * HTML
+        * [About us](/assets/screenshots/testing/html-aboutus.PNG) 
+        * [Bag](/assets/screenshots/testing/html-bag.PNG)
+        * [Bag - With Items](/assets/screenshots/testing/html-bag-items.PNG) 
+        * [Checkout](/assets/screenshots/testing/html-checkout.PNG) 
+        * [Checkout Success](/assets/screenshots/testing/html-checkout-success.PNG)
+        * [Home](/assets/screenshots/testing/html-home.PNG)
+        * [Products](/assets/screenshots/testing/html-products.PNG)
+        * [Products - Add](/assets/screenshots/testing/html-products-add.PNG)
+        * [Products - Edit](/assets/screenshots/testing/html-products-edit.PNG)
+        * [Products - Details](/assets/screenshots/testing/html-products-details.PNG)
+        * [Products - Review](/assets/screenshots/testing/html-products-review.PNG)
+        * [Products - Review - Details](/assets/screenshots/testing/html-products-review-details.PNG)
+        * [Products - Review - Comment](/assets/screenshots/testing/html-products-review-comment.PNG)
+        * [Profile](/assets/screenshots/testing/html-profile.PNG)
+
+### Test Case 04a - HTML Manual Testing - Site Navigation
+
+For the manual testing I first began with the ggeneral site navigation. This includes starting from the home screen and being able to access a number of different areas of the site. As there is only one minor difference between the Unregistered and registered navigation most of the testing has been done Unregistered and I have highlighted the particular differnece. However for the rest of the manual HTML testing, testing both of these cases is necessary due to the amount of differences.
+
+
 
 
 

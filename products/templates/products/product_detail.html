@@ -138,7 +138,7 @@
                 <p class="review-text">{{ review.text|truncatewords:15 }}</p>
                 <br>
                 <p class="secondary-content">{{ review.rate }} / 5</p>
-                <a href="{% url 'view_review' product.id user.username %}" class="btn border-black">View Review</a>
+                <a href="{% url 'view_review' product.id review.user.username %}" class="btn border-black">View Review</a>
             </div>
             {% endfor %}
         </div>
