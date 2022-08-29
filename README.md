@@ -1,6 +1,8 @@
 # Little Ben's Big Treats
 
-My website is a digital e-commerce site with a theme around baking and sweet treats. The site features a range of products baked and created by a team of professional bakers with the intention of baking and delivering them to the end user. A user is able to purchase any product from the site as well as view baking recipes. The core of the site is to encourage purchasing of the products but also to get the user interested in baking as a hobby.
+My website is a digital e-commerce site with a theme around baking and sweet treats. The site is a direct B2C business with intent on selling products directly to the user. The site features a range of products baked and created by a team of professional bakers with the intention of baking and delivering them to the end user. A user is able to purchase any product from the site as well as view baking recipes. The core of the site is to encourage purchasing of the products but also to get the user interested in baking as a hobby.
+
+![Screenshot of responsive site](assets/screenshots/responsive-screenshot.PNG "Site Screenshot")
 
 [Link to Deployed site](https://lbbt.herokuapp.com)
 
@@ -9,13 +11,20 @@ My website is a digital e-commerce site with a theme around baking and sweet tre
 ### CRUD
 
 Product: Create, Read, Update, Delete
-User/Profile: Create, Read, Update
+User/Profile: Create, Read, Update, Delete
 Order: Create, Read
-Review: Create, Read
+Review: Create, Read, Delete
+Comment: Create, Read, Delete
 
 ### Strategy Plane
 
 Little Ben's Big Treats is designed with all age groups and a large customer base in general. It will be designed with a friendly and easy to understand layout so that any user will be able to access it with ease.
+
+#### Overall Goals
+- To provide an ecommerce solution for a small business selling desserts to consumers - B2C
+- To enable business employees to maintain and update the site content.
+- To provide the business owner/manager a degree of control over the site.
+- To provide users with a simple product selection and purchase experience.
 
 #### Ideal User
 
@@ -157,7 +166,7 @@ The product page takes the product id of the selected product from either the pr
 
 Product Recipe:
 
-On all products that have a recipe, a recipe button is made viewable that when clicked will open a popup window containing a product recipe. It intended to not be a 1 to 1 recipe resembling the product the user will purchase and is instead an effort to try encourage more people to bake and to use the site as a recipe index as well to find more food to bake.
+On all products that have a recipe, a recipe button is made viewable that when clicked will open a popup window containing a product recipe. It intended to not be a 1 to 1 recipe resembling the product the user will purchase and is instead an effort to try encourage more people to bake and to use the site as a recipe index as well to find more food to bake. Receipes can be added to a product from the admin panel in Django and are not necessary for a complete product page.
 
 ![Screenshot of product recipe](assets/screenshots/recipe-screenshot.PNG "Product Recipe")
 
@@ -210,20 +219,36 @@ Checkout:
 
 In the checkout the user is given one final review of all the products that they intend on purchasing with a rundown of the prices of the individual prices and the grand total. A delivery total is also calculated if the total does not meet the threshold. Here the customer can also fill out the checkout form to pass their details to be saved for the order. The user can also check to save these delivery details to their profile by checking the tick box. When the user fills out the form and enters their payment details stripe will process the payment and redner a success page.
 
-![Screenshot of Checkout](assets/screenshots/Checkout-screenshot.PNG "Checkout")
+![Screenshot of Checkout](assets/screenshots/checkout-screenshot.PNG "Checkout")
+
+User Profile:
+
+When the user registers for an account a user profile will also be made at the same time. From the User profile the user will have access to some useful tools and information. Such as the ability to update their default delivery information for future purchases. Once this form is filled the details will automatically show up in the checkout form when going to make a purhcase. The user can also find their order history on this page including the original order confirmation message/email the user recieved. This makes it easier to track the previous orders made.
+
+![Screenshot of Profile](assets/screenshots/profile-screenshot.PNG "User Profile")
+
 
 Order History:
 
 Either after a direct purchase from the checkout or from accessing the history from the user profile. The user can access an order details page which will display all the details of the order that was placed. This includes the delivery information as well as the order price. The same order details screen will be emailed to the user at the email provided on sign up if applicable.
 
-User Profile:
+![Screenshot of Order](assets/screenshots/order-history-screenshot.PNG "Order History")
+
 
 Digital Marketing: 
+
+The site also features some Digital Markteting practices to bring the user and the site closer together. The first thing that jumps out is the built in MailChimp newsletter form. When the user signs up for this they will be added to a mailing list where they can recieve further communication from the business. This keeps the user in the loop and product cycle and can know about upcoming products. The footer also contains links to social media platforms that the site will be present on. Including the LBBT facebook business page.
+
+![Screenshot of Marketing](assets/screenshots/marketing-screenshot.PNG "Digital Marketing")
+
+![Screenshot of Facebook](assets/screenshots/facebook-screenshot.PNG "Facebook Marketing")
 
 
 ## Future Features
 
 ### Blog
+
+For the future of the business I would like to adapt a blog feature. There the admins will be able to make blog posts sorted by most recent. The blog posts will contain information regarding the baking world as well as highlighting some of the products on the store front. I would like it so that users are able to comment and leave likes on a blog page to encourage user engagement on a more personal level and interact with the content directly. This will hopefully encourage users to come back regularly. One cause to action could also be sending out to the newsletter about new blog posts to draw in more views and clicks, directly leading to product purchases.
 
 ## Testing
 
