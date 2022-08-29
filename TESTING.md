@@ -64,7 +64,9 @@ TWhen validating by url it discovers a total of 711 warnings relating to the Mai
 
 ## Test Case 04 - HTML Testing
 
-Due to the way Django templates include Django template code in them, and extend other templates, it is not possible to copy the code for each page out of the source html files. Therefore, in order to validate the code correctly, I navigated to the site and accessed the rendered html code through the developer tools of the browser I used during development, Opera GX. I then pasted the code into the HTML validator site
+Due to the way Django templates include Django template code in them, and extend other templates, it is not possible to copy the code for each page out of the source html files. Therefore, in order to validate the code correctly, I navigated to the site and accessed the rendered html code through the developer tools of the browser I used during development, Opera GX. I then pasted the code into the HTML validator site. Across all the pages I tested I some consistent warnings and errors that were created by the inputed elements such as bootstrap, stripe and mailchimp. So I was unable to modify these, however during this testing process I was able to identify some issues in my html that I was able to correct.
+
+
 
 
 
