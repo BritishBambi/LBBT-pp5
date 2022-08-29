@@ -10,11 +10,11 @@ My website is a digital e-commerce site with a theme around baking and sweet tre
 
 ### CRUD
 
-Product: Create, Read, Update, Delete
-User/Profile: Create, Read, Update, Delete
-Order: Create, Read
-Review: Create, Read, Delete
-Comment: Create, Read, Delete
+- Product: Create, Read, Update, Delete
+- User/Profile: Create, Read, Update, Delete
+- Order: Create, Read
+- Review: Create, Read, Delete
+- Comment: Create, Read, Delete
 
 ### Strategy Plane
 
@@ -34,6 +34,8 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
 - Someone who wants to check on their order status
 
 ### User Stories
+
+For the project 10 Primary Epics were deviced that would break up each step of production and highlight what would have to be done across development to complete each step. The epics and the user stories assosiating to them can be seen bellow and in the project board on this github.
 
 1. Django Epic
     - User Story - Django Setup: As a Developer, I want to set up Django and install any libraries that may be needed to start development.
@@ -59,11 +61,18 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
         - Acceptance Criteria: Users will have easy access to search functionality from anywhere on the website. When a query is entered the product listings will display all products that match their query.
     - User Story - Product Listing Page: As a User, I would like to be able to view summary details of a list of products so that I can quickly narrow down the products that I am interested in
         - Acceptance Criteria: When a user searches for a product, then the products are displayed in a listed summary format. All products matching the query, category, or all products are visible
-
+    - User Story - View Product by Category: As a User, I would like to be able to view all products belonging to a set category, so that I can compare those products easily with each other and see what options are available.
+        - Acceptance Criteria: The user will have access to change the product categories being searched for. When the user clicks on a particular category from navigation, the listing page will refresh with products only matching that criteria
+    - User Story - View Product Page: As a User, I would like to be able to view the full details of a product, so that I can make an informed purchase decision
+        - Acceptance Criteria: A user will be able to click onto a product card/link and be presented with a full page of details. From here the user will be able to read reviews and add the product to their bag. 
 5. Shopping Bag
     - User Story - View bag: As a User, I would like to be able to view the contents of my shopping cart, so that I can confirm the details prior to proceeding to purchase
         - Acceptance Criteria: User is able to access their bag from any location on the site. The view is able to render all products that have been saved to the bag accurate to the user input
 6. Checkout
+    - User Story - Proceed to Checkout As a User, I would like to be able to progress to purchasing my items, so that I can complete my transaction
+        - Acceptance Criteria: From anywhere on the site the user will have a link to access their bag and go to the checkout. From the bag, the user can click a button that will bring them to the checkout screen.
+    - User Story - Fill out checkout details: As a User, I would like to be able to provide my details, so that I can complete my order
+        - Acceptnace Criteria: When the user is brought to the checkout screen they will be asked to enter their delivery and billing address. The user will be given a rundown of their bag and total price before entering in their own payment information. The user will be given the option to save these details to their user profile if one is currently logged in.
 7. Product Review
     - User Story - Review Product: As a user, I would like to review a product so that I can help inform other users about a product and give my personal feedback
         - Acceptance Criteria: The form is able to be submitted and contains user review information including some text and a score out of 5. The product will then be connected to the product model to be accessed by the product details view.
@@ -74,36 +83,59 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
 8. Digital Marketing
     - User Story - SEO: As a Site Owner, I would like to enhance the sites Search Engine Optimisation, so that ultimately the site has the ability to perform well in search results and can be found with ease
         - Acceptance Criteria: Ensure that meta keywords are present across website pages to boost SEO. Ensure the necessary files are in place so spiders have a guide to the site and boost SEO score
+    - User Story - Newsletter: As a user, I would like to sign up for the business newsletter, so that I can receive up-to-date news and info straight from the website source.
+        - Acceptance Criteria: A Mailchimp sign-up form will be made easily accessible to the user, when it is filled out it will add the user's email straight to the MailChimp email collection. 
 9. Blog
     - User Story - Make Blog Post: As an admin, I would like to be able to add a blog post to the site, so that we can easily add posts, recipes and trends to the site
         - Acceptance Criteria: When a superuser is logged into their account, then they will have the ability to create a new blog post
     - User Story - View Blog Post: As a User, I would like to be able to read blog posts, so that I can keep up to date on the company and find out all the latest baking trends and recipes
         - Acceptance Criteria: Users can navigate to the blog post page, where they are presented with all the blog posts that are available
 10. User Profiile
+    - User Story - Update Profile Details: As a User, I would like to be able to edit the details stored on my user profile, so that I can have them auto-filled into the checkout
+        - Acceptance Criteria: A form will be made available that when filled out will save the new details to the database. When the user goes to the checkout the details will be pre-filled for the user's convenience.
+    - User Story - View order History: As a User, I want to access a confirmation page on my profile and when my order is completed, so that it is clear my order has gone through and the details are tracked
+        - Acceptance Criteria: Whenever an order is completed a confirmation message will display all the details of the order. The user will be able to access this order history from their own user profile and see the same details
 
 ### Skeleton Plane
 
 #### Wireframes
 
-Home page: The home page will welcome the users to the site and give a clear description as to the purpose of the site. The graphics will be familiar to gamers to make sure they immedietly feel welcome.
+Home page: 
+
+The home page will welcome the users to the site and give a clear description as to the purpose of the site. The graphics will be familiar to gamers to make sure they immedietly feel welcome.
 
 ![Screenshot of home wireframe](assets/screenshots/home-wireframe.PNG "Home Wireframe")
 
 Product List Page:
 
+The product listing page will show all the products matching a query in a grid format with a small card representing each product.
+
 ![Screenshot of product listing wireframe](assets/screenshots/product-listing-wireframe.PNG "Products Wireframe")
 
 Product Detail Page
+
+The detail page for each product will highlight an image of the product and some key inforamtion about the product to get a possible purchase.
 
 ![Screenshot of product detail wireframe](assets/screenshots/product-wireframe.PNG "Product details Wireframe")
 
 Bag:
 
+The bag will contain a rundown of the items currently in the bag for the user to confirm before going to the checkout.
+
+![Screenshot of bag wireframe](assets/screenshots/bag-wireframe.PNG "Bag Wireframe")
+
 Checkout:
+
+The checkout will have a final rundown of the bag contents and provide a form to fill out to submit the final payment
+
+![Screenshot of checkout wireframe](assets/screenshots/checkout-wireframe.PNG "Checkout Wireframe")
 
 Account Page:
 
-Blog: 
+The account page will contain some simple information that the user can access from the nav bar. Such as their delivery information and any previous orders
+
+![Screenshot of profile wireframe](assets/screenshots/profile-wireframe.PNG "Profile Wireframe")
+
 
 ### Surface
 
@@ -151,17 +183,26 @@ Product Listing Page:
 
 When a user searches for a product or uses one of the navigation links to view a category, a listing of products is rendered. A helpful card containing some key information regarding to the product is easily shown to the user. From here a super user is also able to easily make quick changes to a product with an edit and a delete button. By clicking onto the product picture a user is able to view details about a particular product
 
+
 ![Screenshot of product listings](assets/screenshots/products-screenshot.PNG "Product Listings")
 
-User Story - Product Listing Page:
+USER STORY: Product Listing Page
 
-    - As a User, I would like to be able to view summary details of a list of products so that I can quickly narrow down the products that I am interested in
+    -  As a User, I would like to be able to view summary details of a list of products so that I can quickly narrow down the products that I am interested in
+
+USER STORY - View Product by Category:
+
+    - As a User, I would like to be able to view all products belonging to a set category, so that I can compare those products easily with each other and see what options are available.
 
 Product Page:
 
 The product page takes the product id of the selected product from either the product listings page or an external link and renders information onto a template for the user to read. From here a user can access some detailed information relating to the product including a full size photo, description and even a basic recipe similar to the product. From here a user is also able to quickly add a product to the bag where it can then be brought into the checkout for purchase. A user is able to read reviews relating to the product as well as see the total score calculated on the average of review scores.
 
 ![Screenshot of product detail](assets/screenshots/products-screenshot.PNG "Product Details")
+
+USER STORY: View Product Page
+
+    - As a User, I would like to be able to view the full details of a product, so that I can make an informed purchase decision
 
 
 Product Recipe:
