@@ -163,7 +163,7 @@
     <script type="text/javascript">
         $('#sort-selector').change(function () {
             var selector = $(this);
-            var currentUrl = new URL(window.location)
+            var currentUrl = new URL(window.location);
 
             var selectedVal = selector.val();
             if (selectedVal != "reset") {
@@ -178,8 +178,8 @@
                 currentUrl.searchParams.delete("sort", sort);
                 currentUrl.searchParams.delete("direction", direction);
 
-                window.location.replace(currentUrl)
+                window.location.replace(currentUrl);
             }
-        })
+        });
     </script>
 {% endblock %}
