@@ -18,7 +18,7 @@ My website is a digital e-commerce site with a theme around baking and sweet tre
 
 ### Strategy Plane
 
-Little Ben's Big Treats is designed with all age groups and a large customer base in general. It will be designed with a friendly and easy to understand layout so that any user will be able to access it with ease.
+Little Ben's Big Treats is a business to consumer B2C ecommerce site designed with all age groups and a large customer base in mind. It will be easy for users to find and purchase selected products, read reviews and discover new recipies for home baking. It will be designed with a friendly and easy to understand layout so that any user will be able to access it with ease.
 
 #### Overall Goals
 - To provide an ecommerce solution for a small business selling desserts to consumers - B2C
@@ -31,7 +31,13 @@ Little Ben's Big Treats is designed with all age groups and a large customer bas
 - Someone who wants to purhcase a dessert/snack for an event
 - Someone who wants to find new recipes to research or purchase
 - Someone who wants to try a product before attempting to bake a recipe
-- Someone who wants to check on their order status
+- Baking enthusisests who want to learn more from other bakers and leave a review
+
+#### Site Goals
+
+- To provide users with a place to purchase their baked goods
+- To promote the product range of LBBT
+- To promote LBBT as a more personal and advantagous place to buy baked goods
 
 ### User Stories
 
