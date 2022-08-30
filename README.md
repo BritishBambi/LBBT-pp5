@@ -159,6 +159,8 @@ The body of the site used the Poppins font as it was easy to read at a range of 
 
 I knew going into the project that custom models were going to be required when building the site. The intention was always to use Allauth to handle all the user authentication. This meant that the User model would be very involved across multiple sections of my website. Things such as an order, checkout and bag would all need to relate to the user who saved it and ensuring that the whole process would relate back to the user model, including the profile. The user and profile go hand in hand and would ensure that information could be saved to the user profile to be used across the rest of the site such as order history and delivery information.
 
+One of the main links in the database comes from the products itself. It has the product review, recipe and checkout order that all rely on the ID of a product to connect up all the relevent information. This includs making sure the correct recipe is assigned to the right product. Similarly with the review ensuring it is shown on the right product page as the review comments will have to show up on the relevent review page. But of course the heirarchy of the database brings everything back to the user account. Comments, Reviews Orders and profiles all rely on checkiing the user account in order to save content under the correct user. This ensures that only the specific user will recieve an order confirmation or the ability to delete a review on a page. 
+
 ![Screenshot of database](assets/screenshots/database-screenshot.PNG "Database")
 
 
