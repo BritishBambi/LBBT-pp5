@@ -61,6 +61,9 @@ The JavaScript code was checked using the jshint.com validator available at jshi
 
 TWhen validating by url it discovers a total of 711 warnings relating to the Mailchimp newsletter imported css and the bootstrap code. When validating by direct input the validator also reports a warning about the imported style sheet - or the google font import, the warning only states that it does not check the imported style sheet in direct input mode and can be ignored.
 
+![Base CSS](/assets/screenshots/testing/css-base.PNG)
+
+![Checkout CSS](/assets/screenshots/testing/css-checkout.PNG)
 
 ## Test Case 04 - HTML Testing
 
@@ -83,11 +86,53 @@ Due to the way Django templates include Django template code in them, and extend
         * [Products - Review - Comment](/assets/screenshots/testing/html-products-review-comment.PNG)
         * [Profile](/assets/screenshots/testing/html-profile.PNG)
 
-### Test Case 04a - HTML Manual Testing - Site Navigation
+### Test Case 04a - Manual Testing - Site Navigation
 
 For the manual testing I first began with the ggeneral site navigation. This includes starting from the home screen and being able to access a number of different areas of the site. As there is only one minor difference between the Unregistered and registered navigation most of the testing has been done Unregistered and I have highlighted the particular differnece. However for the rest of the manual HTML testing, testing both of these cases is necessary due to the amount of differences.
 
+![Site Navigation](/assets/screenshots/testing/04a-navigation.PNG)
 
+### Test Case 04b - Manual Testing - Unregistered Products
+
+For the products page a lot of the interactions are accesible to both registered and unregistered users. However a review may only be posted by a registered user and so an unregistered user will be prompted to sign in if they try to select this option. Otherwise a user can view recipies, add to bag and view the same things as everyone else.
+
+![Unregistered Products](/assets/screenshots/testing/04b-unregisterd-products.PNG)
+
+### Test Case 04c - Manual Testing - Unregistered Orders
+
+As will be highlighted with the Registered test case the key difference when placing an order as an unregistered user is that the payment details and the order will not be saved to a user profile. A checkout success page will still be presented to the user although to find this again the user will have to access the email that was sent to the address they provided on payment.
+
+![Unregistered Orders](/assets/screenshots/testing/04c-unregistered-orders.PNG)
+
+![Unregistered Orders Email](/assets/screenshots/order-email2.PNG)
+
+### Test Case 05a -Manual Testing - Registered Products
+
+The main difference between registered users as highlighted previously comes in the ability to leave a product review and that process has been documented. This prevents more users abusing the system by at least getting them to make an account first where their review and user history can be tracked and moderated if bad activity has been spotted.
+
+![Registered Products](/assets/screenshots/testing/05a-registered-products.PNG)
+
+### Test Case 05b - Manual Testing - Registered Orders
+
+Again the purchase process remains standard across the site for registered and unregistered users however this brings the main benefit of having your details saved. When the user has their information saved either from the checkout for a future order or from the profile page, this will be represented when they go to the checkout. This helps a user to keep all their orders saved in one place and have the details pre entered to save time placing an order.
+
+![Registered Orders](/assets/screenshots/testing/05b-registered-order.PNG)
+
+![Registered Order Email](/assets/screenshots/order-email.PNG)
+
+### Test Case 05c - Manual Testing - Registered profile
+
+While the profile page does not contain that many elements and features it uses allauth templates to render some important account settings and also displays the order details form and the order history if any has been found matching the user profile.
+
+![Registered profile](/assets/screenshots/testing/05c-registered-profile.PNG)
+
+### Test Case 06 - Manual Testing - MailChimp 
+
+It is important to test that when a user email has been entered into the newsletter form that it has properly been added to the mailchimp list. 
+
+![Newsletter Screenshot](/assets/screenshots/marketing-screenshot.PNG)
+
+![MailChimp Screenshot](/assets/screenshots/newsletter-confirmation.PNG)
 
 
 
